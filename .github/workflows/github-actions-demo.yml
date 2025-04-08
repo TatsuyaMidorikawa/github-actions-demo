@@ -9,11 +9,7 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           sparse-checkout: frontend
-  second:
-    runs-on: ubuntu-latest
-    steps:
-      - run: cd frontend
+      - run: echo github.ref
